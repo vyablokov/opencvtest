@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include "ui_mainwindow.h"
+#include <qdebug.h>
 namespace Ui {
 class MainWindow;
 }
@@ -17,6 +18,15 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    int showImage(QString imagePath);
+
+public slots:
+    void onloadButtonClicked()
+    {
+        showImage(ui->pathInput->text());
+        qDebug() << "pressed";
+    }
+
 };
 
 #endif // MAINWINDOW_H

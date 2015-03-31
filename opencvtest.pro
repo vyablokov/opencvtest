@@ -18,3 +18,7 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+LIBS += `/usr/local/bin/pkg-config opencv --libs`
+
+INCLUDEPATH += "/usr/local/include"
